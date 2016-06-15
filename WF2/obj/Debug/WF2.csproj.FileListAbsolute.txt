@@ -14,3 +14,6 @@ D:\Work\Шаг\Уроки\WF2\WF2\obj\Debug\WF2.ucMountain.resources
 D:\ITacademy\C#\Hometasks\WF2\WF2\bin\Debug\WF2.exe.config
 D:\ITacademy\C#\Hometasks\WF2\WF2\obj\Debug\WF2.exe
 D:\ITacademy\C#\Hometasks\WF2\WF2\obj\Debug\WF2.pdb
+D:\ITacademy\C#\Hometasks\WindowsFormLongTerm\WF2\bin\Debug\WF2.exe.config
+D:\ITacademy\C#\Hometasks\WindowsFormLongTerm\WF2\obj\Debug\WF2.exe
+D:\ITacademy\C#\Hometasks\WindowsFormLongTerm\WF2\obj\Debug\WF2.pdb
