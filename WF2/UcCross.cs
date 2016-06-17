@@ -17,12 +17,16 @@ namespace WF2
             InitializeComponent();
         }
 
+
+
         public Cross GetCross()
         {
             return new Cross
             {
                 Name = tbName.Text,
+                Size = tbSize.Text.GetInt()
             };
+            return null;
         }
     }
 }

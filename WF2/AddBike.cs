@@ -66,5 +66,10 @@ namespace WF2
                     return null;
             }
         }
+
+        private void AddBike_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
     }
 }
