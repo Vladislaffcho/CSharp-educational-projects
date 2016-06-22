@@ -34,6 +34,7 @@ namespace WindowsForm
         public HardTeilBike GetHardTeilBike()
         {
             HardTeilBike hrdTailBike = new HardTeilBike(Id);
+            hrdTailBike.typeOfBike = BikeType.HardTeil;
             hrdTailBike.Name = tbName.Text;
             hrdTailBike.WheelDiameter = tbWheelDiameter.Text.GetDouble();
             hrdTailBike.ShockAbsorbersNumber = tbAbsorbers.Text.GetInt();

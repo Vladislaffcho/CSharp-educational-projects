@@ -11,6 +11,11 @@ namespace WindowsForm
         {
         }
 
+        public override string ToString()
+        {
+            return string.Format("{0};{1};{2};{3}", Id, Name, WheelDiameter, BikeType.Cross);
+        }
+
 
         /*private int speedCount;
         private CrossColor _cbColor;

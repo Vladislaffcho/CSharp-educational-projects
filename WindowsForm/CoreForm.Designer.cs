@@ -44,6 +44,7 @@ namespace WindowsForm
             this.lvBikes = new System.Windows.Forms.ListView();
             this.colName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colSize = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.saveToFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stContent)).BeginInit();
             this.stContent.Panel1.SuspendLayout();
@@ -68,7 +69,8 @@ namespace WindowsForm
             this.openToolStripMenuItem,
             this.removeToolStripMenuItem,
             this.tsSeparator,
-            this.openSavedToolStripMenuItem});
+            this.openSavedToolStripMenuItem,
+            this.saveToFileToolStripMenuItem});
             this.bikeToolStripMenuItem.Name = "bikeToolStripMenuItem";
             this.bikeToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.bikeToolStripMenuItem.Text = "Bike";
@@ -160,6 +162,13 @@ namespace WindowsForm
             this.colSize.Text = "Size";
             this.colSize.Width = 65;
             // 
+            // saveToFileToolStripMenuItem
+            // 
+            this.saveToFileToolStripMenuItem.Name = "saveToFileToolStripMenuItem";
+            this.saveToFileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveToFileToolStripMenuItem.Text = "Save To File";
+            this.saveToFileToolStripMenuItem.Click += new System.EventHandler(this.saveToFileToolStripMenuItem_Click);
+            // 
             // CoreForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -198,6 +207,7 @@ namespace WindowsForm
         private ToolStripMenuItem openSavedToolStripMenuItem;
         private ToolStripMenuItem windowsToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem;
+        private ToolStripMenuItem saveToFileToolStripMenuItem;
     }
 }
 

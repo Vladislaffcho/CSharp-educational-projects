@@ -57,6 +57,7 @@ namespace WindowsForm
         public CrossBike GetCross()
         {
             CrossBike mnBike = new CrossBike(Id);
+            mnBike.typeOfBike = BikeType.Cross;
             mnBike.Name = tbName.Text;
             mnBike.WheelDiameter = tbWheelDiameter.Text.GetDouble();
             mnBike.Speed = tbSpeedCount.Text.GetInt();

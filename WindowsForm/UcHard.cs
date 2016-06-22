@@ -38,6 +38,7 @@ namespace WindowsForm
         public HardBike GetHardBike()
         {
             HardBike hrdBike = new HardBike(Id);
+            hrdBike.typeOfBike = BikeType.Hard;
             hrdBike.Name = tbName.Text;
             hrdBike.WheelDiameter = tbWheelDiameter.Text.GetDouble();
             hrdBike.Weight = tbWeight.Text.GetDouble();

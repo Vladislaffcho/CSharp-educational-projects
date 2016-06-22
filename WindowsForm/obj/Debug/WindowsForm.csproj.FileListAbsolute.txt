@@ -41,3 +41,17 @@ D:\ITacademy\C#\LongTermProject\WindowsForm\obj\Debug\WindowsForm.RemoveBike.res
 D:\ITacademy\C#\Hometasks\WindowsFormLongTerm\WindowsForm\bin\Debug\WindowsForm.exe.config
 D:\ITacademy\C#\Hometasks\WindowsFormLongTerm\WindowsForm\obj\Debug\WindowsForm.exe
 D:\ITacademy\C#\Hometasks\WindowsFormLongTerm\WindowsForm\obj\Debug\WindowsForm.pdb
+D:\ITacademy\C#\WindowsFormLongTerm\WindowsForm\bin\Debug\WindowsForm.exe.config
+D:\ITacademy\C#\WindowsFormLongTerm\WindowsForm\obj\Debug\WindowsForm.exe
+D:\ITacademy\C#\WindowsFormLongTerm\WindowsForm\obj\Debug\WindowsForm.pdb
+D:\ITacademy\C#\WindowsFormLongTerm\WindowsForm\bin\Debug\WindowsForm.exe
+D:\ITacademy\C#\WindowsFormLongTerm\WindowsForm\bin\Debug\WindowsForm.pdb
+D:\ITacademy\C#\WindowsFormLongTerm\WindowsForm\obj\Debug\WindowsForm.csprojResolveAssemblyReference.cache
+D:\ITacademy\C#\WindowsFormLongTerm\WindowsForm\obj\Debug\WindowsForm.AddBike.resources
+D:\ITacademy\C#\WindowsFormLongTerm\WindowsForm\obj\Debug\WindowsForm.CoreForm.resources
+D:\ITacademy\C#\WindowsFormLongTerm\WindowsForm\obj\Debug\WindowsForm.Properties.Resources.resources
+D:\ITacademy\C#\WindowsFormLongTerm\WindowsForm\obj\Debug\WindowsForm.RemoveBike.resources
+D:\ITacademy\C#\WindowsFormLongTerm\WindowsForm\obj\Debug\WindowsForm.UcCross.resources
+D:\ITacademy\C#\WindowsFormLongTerm\WindowsForm\obj\Debug\WindowsForm.UcHard.resources
+D:\ITacademy\C#\WindowsFormLongTerm\WindowsForm\obj\Debug\WindowsForm.UcHardTeil.resources
+D:\ITacademy\C#\WindowsFormLongTerm\WindowsForm\obj\Debug\WindowsForm.csproj.GenerateResource.Cache

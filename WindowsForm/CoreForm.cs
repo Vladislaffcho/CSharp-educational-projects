@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -58,19 +59,19 @@ namespace WindowsForm
                 {
                     if (bike.Id == id)
                     {
-                        string type = (_bikes.Find(i => i.Id == id)).ToString();
+                        BikeType type = (bike.typeOfBike);
                         stContent.Panel2.Controls.Clear();
                         switch (type)
                         {
-                            case ("WindowsForm.CrossBike"):
+                            case (BikeType.Cross):
                                 stContent.Panel2.Controls.Add(new UcCross((CrossBike)bike) { Dock = DockStyle.Fill });
                                 break;
-                            case ("WindowsForm.HardBike"):
-                                stContent.Panel2.Controls.Add(new UcHard((HardBike)bike) { Dock = DockStyle.Fill });
-                                break;
-                            case ("WindowsForm.HardTeilBike"):
-                                stContent.Panel2.Controls.Add(new UcHardTeil((HardTeilBike)bike) { Dock = DockStyle.Fill });
-                                break;
+                                case (BikeType.Hard):
+                                    stContent.Panel2.Controls.Add(new UcHard((HardBike)bike) { Dock = DockStyle.Fill });
+                                    break;
+                                case (BikeType.HardTeil):
+                                    stContent.Panel2.Controls.Add(new UcHardTeil((HardTeilBike)bike) { Dock = DockStyle.Fill });
+                                    break;
                         }
                         break;
                     }
@@ -94,6 +95,38 @@ namespace WindowsForm
             {
                 MessageBox.Show("There are no recordings to delete", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void saveToFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Stream st = null;
+            StreamWriter sr = null;
+            try
+            {
+                st = new FileStream(@"D:\ITacademy\C#\WindowsFormLongTerm\WindowsForm\TextFile\base.txt",
+                    FileMode.OpenOrCreate);
+                sr = new StreamWriter(st);
+                foreach (var bike in _bikes)
+                {
+                    sr.Write(bike.ToString() + Environment.NewLine);
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                if (sr != null)
+                {
+                    sr.Close();
+                }
+                if (st != null)
+                {
+                    st.Close();
+                }
+            }
+            
         }
     }
 }
