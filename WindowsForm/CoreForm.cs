@@ -189,32 +189,32 @@ namespace WindowsForm
 
                     switch (type)
                     {
-                        /* Add try parce method to Cross and HardTeil classes. Update the method in Hard bike class */
-
-                            /*case BikeType.Cross:
-                            HardBike bike;
-                            if (HardBike.TryParce(stringBike, out bike))
+                        case BikeType.Cross:
+                            CrossBike bikeCross;
+                            if (CrossBike.TryParce(stringBike, out bikeCross))
                             {
-                                _bikes.Add(bike);
-                            }
-                            break;*/
-
-                            case BikeType.Hard:
-                            HardBike bike;
-                            if (HardBike.TryParce(stringBike, out bike))
-                            {
-                                _bikes.Add(bike);
-                                AddItemsToListView(bike);
+                                _bikes.Add(bikeCross);
+                                AddItemsToListView(bikeCross);
                             }
                             break;
 
-                            /*case BikeType.HardTeil:
-                            HardBike bike;
-                            if (HardBike.TryParce(stringBike, out bike))
+                        case BikeType.Hard:
+                            HardBike bikeHard;
+                            if (HardBike.TryParce(stringBike, out bikeHard))
                             {
-                                _bikes.Add(bike);
+                                _bikes.Add(bikeHard);
+                                AddItemsToListView(bikeHard);
                             }
-                            break;*/
+                            break;
+
+                        case BikeType.HardTeil:
+                            HardTeilBike bikeHardTeil;
+                            if (HardTeilBike.TryParce(stringBike, out bikeHardTeil))
+                            {
+                                _bikes.Add(bikeHardTeil);
+                                AddItemsToListView(bikeHardTeil);
+                            }
+                            break;
                     }
                 }
             }
