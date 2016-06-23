@@ -15,10 +15,6 @@ namespace WindowsForm
         }
 
         public BikeType typeOfBike { get; set; }
-        /*
-         * Сделать здесь дополнительный Enum для выбора типа байкк
-         */
-
 
         /*public readonly int Id;
         private double _wheelDiameter;

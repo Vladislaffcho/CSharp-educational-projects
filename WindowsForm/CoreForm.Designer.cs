@@ -99,6 +99,7 @@ namespace WindowsForm
             this.openSavedToolStripMenuItem.Name = "openSavedToolStripMenuItem";
             this.openSavedToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.openSavedToolStripMenuItem.Text = "Open Saved";
+            this.openSavedToolStripMenuItem.Click += new System.EventHandler(this.openSavedToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 

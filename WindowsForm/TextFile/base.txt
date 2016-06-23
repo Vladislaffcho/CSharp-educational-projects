@@ -1,3 +1,1 @@
-1;12;12;Cross
-2;12;21;Hard
-3;12;12;HardTeil
+1;Hard;Test;882.2;77.9;Good;Carbon
