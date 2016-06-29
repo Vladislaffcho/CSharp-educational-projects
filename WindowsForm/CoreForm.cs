@@ -279,6 +279,7 @@ namespace WindowsForm
                     var ser = new XmlSerializer(typeof(List<Bike>),
                         new[] { typeof(CrossBike), typeof(HardBike), typeof(HardTeilBike) });
                     _bikes = (List<Bike>)ser.Deserialize(stream);
+                    _bikeId = 1;
                     foreach (var bike in _bikes)
                     {
                         AddItemsToListView(bike);
