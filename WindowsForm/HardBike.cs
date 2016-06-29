@@ -12,6 +12,7 @@ namespace WindowsForm
         {
             
         }
+
         [DataMember]
         public string TireType { get; set; }
         [DataMember]

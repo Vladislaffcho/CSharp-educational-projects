@@ -8,7 +8,7 @@ namespace WindowsForm
     public abstract class Bike
     {
         [DataMember]
-        public readonly int Id;
+        public int Id;
         [DataMember]
         public double WheelDiameter { get; set; }
         [DataMember]

@@ -105,6 +105,8 @@ namespace WindowsForm
 
         private void saveToFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+            /* Save to .xml file */
             try
             {
                 SerilizeToFile();
@@ -118,6 +120,10 @@ namespace WindowsForm
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
+
+            /* Save to .txt file */
+
+            /* Method 1 */
             /*string result = string.Empty;
             foreach (var bike in _bikes)
             {
@@ -148,7 +154,7 @@ namespace WindowsForm
                 throw new Exception(ex.Message, ex);
             }*/
 
-            /* Method 3 - Old
+            /* Method 3 - Old one
              * 
              * 
              * Stream st = null;
@@ -183,58 +189,77 @@ namespace WindowsForm
 
         private void openSavedToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            /*string filter = "Text Files|*.txt";*/
+            string filter = "Xml files|*.xml";
+            OpenSavedFile(filter);
+        }
+
+        private void OpenSavedFile(string filter)
+        {
+
             OpenFileDialog openFile = new OpenFileDialog();
-            openFile.Filter = "Text Files|*.txt";
+            openFile.Filter = filter;
             openFile.Multiselect = false;
             openFile.InitialDirectory = Directory.GetCurrentDirectory();
 
             if (openFile.ShowDialog() == DialogResult.OK)
             {
-                string filetext = File.ReadAllText(openFile.FileName);
-                List<string> stringBikes = filetext.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries).ToList();
+                lvBikes.Items.Clear();
                 _bikes.Clear();
+                DeSerializeFromFile(openFile.FileName);
+                /*ReadFromTxt(openFile.FileName);*/
+            }
+        }
 
-                foreach (var stringBike in stringBikes)
+        private void ReadFromTxt(string fileName)
+        {
+            string filetext = File.ReadAllText(fileName);
+            List<string> stringBikes =
+                filetext.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries).ToList();
+            _bikes.Clear();
+
+            foreach (var stringBike in stringBikes)
+            {
+                var stringBikeType = stringBike.Split(';').ToList()[1];
+                BikeType type;
+                Enum.TryParse(stringBikeType, true, out type);
+                _bikeId++;
+
+                switch (type)
                 {
-                    var stringBikeType = stringBike.Split(';').ToList()[1];
-                    BikeType type;
-                    Enum.TryParse(stringBikeType, true, out type);
+                    case BikeType.Cross:
+                        CrossBike bikeCross;
+                        if (CrossBike.TryParce(stringBike, out bikeCross))
+                        {
+                            _bikes.Add(bikeCross);
+                            AddItemsToListView(bikeCross);
+                        }
+                        break;
 
-                    switch (type)
-                    {
-                        case BikeType.Cross:
-                            CrossBike bikeCross;
-                            if (CrossBike.TryParce(stringBike, out bikeCross))
-                            {
-                                _bikes.Add(bikeCross);
-                                AddItemsToListView(bikeCross);
-                            }
-                            break;
+                    case BikeType.Hard:
+                        HardBike bikeHard;
+                        if (HardBike.TryParce(stringBike, out bikeHard))
+                        {
+                            _bikes.Add(bikeHard);
+                            AddItemsToListView(bikeHard);
+                        }
+                        break;
 
-                        case BikeType.Hard:
-                            HardBike bikeHard;
-                            if (HardBike.TryParce(stringBike, out bikeHard))
-                            {
-                                _bikes.Add(bikeHard);
-                                AddItemsToListView(bikeHard);
-                            }
-                            break;
-
-                        case BikeType.HardTeil:
-                            HardTeilBike bikeHardTeil;
-                            if (HardTeilBike.TryParce(stringBike, out bikeHardTeil))
-                            {
-                                _bikes.Add(bikeHardTeil);
-                                AddItemsToListView(bikeHardTeil);
-                            }
-                            break;
-                    }
+                    case BikeType.HardTeil:
+                        HardTeilBike bikeHardTeil;
+                        if (HardTeilBike.TryParce(stringBike, out bikeHardTeil))
+                        {
+                            _bikes.Add(bikeHardTeil);
+                            AddItemsToListView(bikeHardTeil);
+                        }
+                        break;
                 }
             }
         }
 
         public void SerilizeToFile()
         {
+            /*Directory. to check if directory exists */
             using (var stream = new FileStream(@"D:\ITacademy\C#\WindowsFormLongTerm\WindowsForm\TextFile\Ser.xml",
                     FileMode.OpenOrCreate))
             {
@@ -242,6 +267,31 @@ namespace WindowsForm
                     new[] {typeof (CrossBike), typeof (HardBike), typeof (HardTeilBike)});
                 ser.Serialize(stream, _bikes);
             }
+        }
+
+        public void DeSerializeFromFile(string fileName)
+        {
+            if (File.Exists(fileName))
+            {
+                using (var stream = new FileStream(@"D:\ITacademy\C#\WindowsFormLongTerm\WindowsForm\TextFile\Ser.xml",
+                    FileMode.OpenOrCreate))
+                {
+                    var ser = new XmlSerializer(typeof(List<Bike>),
+                        new[] { typeof(CrossBike), typeof(HardBike), typeof(HardTeilBike) });
+                    _bikes = (List<Bike>)ser.Deserialize(stream);
+                    foreach (var bike in _bikes)
+                    {
+                        AddItemsToListView(bike);
+                        _bikeId++;
+                    }
+                }
+            }
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            About ab = new About();
+            ab.ShowDialog();
         }
     }
 }

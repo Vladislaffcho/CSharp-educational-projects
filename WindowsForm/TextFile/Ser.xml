@@ -1,18 +1,29 @@
 <?xml version="1.0"?>
 <ArrayOfBike xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Bike xsi:type="CrossBike">
-    <WheelDiameter>123</WheelDiameter>
-    <Name>123</Name>
+    <Id>1</Id>
+    <WheelDiameter>12</WheelDiameter>
+    <Name>1Test</Name>
     <typeOfBike>Cross</typeOfBike>
-    <Speed>123</Speed>
-    <Color>Green</Color>
+    <Speed>12</Speed>
+    <Color>Red</Color>
   </Bike>
   <Bike xsi:type="HardBike">
-    <WheelDiameter>123</WheelDiameter>
-    <Name>123</Name>
+    <Id>2</Id>
+    <WheelDiameter>12</WheelDiameter>
+    <Name>2Test</Name>
     <typeOfBike>Hard</typeOfBike>
-    <TireType>333</TireType>
-    <Weight>123</Weight>
-    <Material>Aluminium</Material>
+    <TireType>12</TireType>
+    <Weight>12</Weight>
+    <Material>Carbon</Material>
+  </Bike>
+  <Bike xsi:type="HardTeilBike">
+    <Id>3</Id>
+    <WheelDiameter>12</WheelDiameter>
+    <Name>3Test</Name>
+    <typeOfBike>HardTeil</typeOfBike>
+    <ShockAbsorbersNumber>12</ShockAbsorbersNumber>
+    <SpeedNumber>12</SpeedNumber>
+    <AirPumpEquiped>true</AirPumpEquiped>
   </Bike>
 </ArrayOfBike>
