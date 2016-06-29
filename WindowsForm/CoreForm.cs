@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace WindowsForm
 {
@@ -68,7 +69,6 @@ namespace WindowsForm
                         stContent.Panel2.Controls.Clear();
                         switch (type)
                         {
-                            /* Здесь будет вылетать Доработать tryParce */
                             case (BikeType.Cross):
                                 stContent.Panel2.Controls.Add(new UcCross((CrossBike)bike) { Dock = DockStyle.Fill });
                                 break;
@@ -89,7 +89,7 @@ namespace WindowsForm
         {
             if (_bikes.Count > 0)
             {
-                RemoveBike rb = new RemoveBike(_bikes);
+                RemoveBike rb = new RemoveBike(_bikes.Count);
                 if (rb.ShowDialog() == DialogResult.OK)
                 {
                     _bikes.RemoveAt(rb.IndexToRemove);
@@ -105,12 +105,25 @@ namespace WindowsForm
 
         private void saveToFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string result = string.Empty;
+            try
+            {
+                SerilizeToFile();
+                MessageBox.Show("File saved", "Information",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+            /*string result = string.Empty;
             foreach (var bike in _bikes)
             {
                 result += bike + Environment.NewLine;
             }
-            File.WriteAllText(@"D:\ITacademy\C#\WindowsFormLongTerm\WindowsForm\TextFile\base.txt", result);
+            File.WriteAllText(@"D:\ITacademy\C#\WindowsFormLongTerm\WindowsForm\TextFile\base.txt", result);*/
 
 
 
@@ -217,6 +230,17 @@ namespace WindowsForm
                             break;
                     }
                 }
+            }
+        }
+
+        public void SerilizeToFile()
+        {
+            using (var stream = new FileStream(@"D:\ITacademy\C#\WindowsFormLongTerm\WindowsForm\TextFile\Ser.xml",
+                    FileMode.OpenOrCreate))
+            {
+                var ser = new XmlSerializer(typeof (List<Bike>),
+                    new[] {typeof (CrossBike), typeof (HardBike), typeof (HardTeilBike)});
+                ser.Serialize(stream, _bikes);
             }
         }
     }

@@ -1,13 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 
 namespace WindowsForm
 {
+    [DataContract]
     public class HardTeilBike : Bike
     {
+        public HardTeilBike()
+        {
+            
+        }
+        [DataMember]
         public int ShockAbsorbersNumber { get; set; }
+        [DataMember]
         public int SpeedNumber { get; set; }
+        [DataMember]
         public bool AirPumpEquiped { get; set; }
 
         public HardTeilBike(int id) : base(id)

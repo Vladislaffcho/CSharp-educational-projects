@@ -1,12 +1,17 @@
 ﻿using System;
+using System.Runtime.Serialization;
 using System.Windows.Forms;
 
 namespace WindowsForm
 {
+    [DataContract]
     public abstract class Bike
     {
+        [DataMember]
         public readonly int Id;
+        [DataMember]
         public double WheelDiameter { get; set; }
+        [DataMember]
         public string Name { get; set; }
 
         public Bike(int id)
@@ -15,6 +20,11 @@ namespace WindowsForm
         }
 
         public BikeType typeOfBike { get; set; }
+
+        protected Bike()
+        {
+            
+        }
 
         /*public readonly int Id;
         private double _wheelDiameter;

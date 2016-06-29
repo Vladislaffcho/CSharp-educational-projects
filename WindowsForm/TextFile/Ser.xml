@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ArrayOfBike xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Bike xsi:type="CrossBike">
+    <WheelDiameter>123</WheelDiameter>
+    <Name>123</Name>
+    <typeOfBike>Cross</typeOfBike>
+    <Speed>123</Speed>
+    <Color>Green</Color>
+  </Bike>
+  <Bike xsi:type="HardBike">
+    <WheelDiameter>123</WheelDiameter>
+    <Name>123</Name>
+    <typeOfBike>Hard</typeOfBike>
+    <TireType>333</TireType>
+    <Weight>123</Weight>
+    <Material>Aluminium</Material>
+  </Bike>
+</ArrayOfBike>

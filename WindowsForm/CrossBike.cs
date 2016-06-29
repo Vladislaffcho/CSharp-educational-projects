@@ -1,12 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 namespace WindowsForm
 {
+    [DataContract]
     public class CrossBike : Bike
     {
+        public CrossBike()
+        {
+            
+        }
+        [DataMember]
         public int Speed { get; set; }
+        [DataMember]
         public CrossColor Color { get; set; }
 
         public CrossBike(int id) : base(id)

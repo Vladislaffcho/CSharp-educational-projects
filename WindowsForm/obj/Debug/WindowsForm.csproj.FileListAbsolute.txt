@@ -55,3 +55,4 @@ D:\ITacademy\C#\WindowsFormLongTerm\WindowsForm\obj\Debug\WindowsForm.UcCross.re
 D:\ITacademy\C#\WindowsFormLongTerm\WindowsForm\obj\Debug\WindowsForm.UcHard.resources
 D:\ITacademy\C#\WindowsFormLongTerm\WindowsForm\obj\Debug\WindowsForm.UcHardTeil.resources
 D:\ITacademy\C#\WindowsFormLongTerm\WindowsForm\obj\Debug\WindowsForm.csproj.GenerateResource.Cache
+D:\ITacademy\C#\WindowsFormLongTerm\WindowsForm\obj\Debug\WindowsForm.About.resources

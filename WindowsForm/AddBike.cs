@@ -93,7 +93,7 @@ namespace WindowsForm
                 case BikeType.HardTeil:
                     return ucHardTeil.ValidateControls();
                 default:
-                    return true;
+                    return true; /* return false, change validation */
             }
         }
 

@@ -1,13 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 
 namespace WindowsForm
 {
+    [DataContract]
     public class HardBike : Bike
     {
+        public HardBike()
+        {
+            
+        }
+        [DataMember]
         public string TireType { get; set; }
+        [DataMember]
         public double Weight { get; set; }
+        [DataMember]
         public HardBikeMaterial Material { get; set; }
 
         public HardBike(int id) : base(id)

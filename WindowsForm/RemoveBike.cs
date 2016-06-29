@@ -14,11 +14,11 @@ namespace WindowsForm
     {
 
         private int _bikeIndex;
-        private List<Bike> _lBikes;
-        public RemoveBike(List<Bike> bikes)
+        private int _lBikesCount;
+        public RemoveBike(int count)
         {
             InitializeComponent();
-            _lBikes = bikes;
+            _lBikesCount = count;
         }
 
         private void RemoveBike_FormClosing(object sender, FormClosingEventArgs e)
@@ -38,7 +38,7 @@ namespace WindowsForm
         {
 
             if (numUpDnRemove.Value < 1 ||
-                numUpDnRemove.Value > _lBikes.Count)
+                numUpDnRemove.Value > _lBikesCount)
             {
                 return false;
             }
