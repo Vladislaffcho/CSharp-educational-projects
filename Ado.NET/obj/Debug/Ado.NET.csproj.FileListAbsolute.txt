@@ -1,0 +1,12 @@
+D:\ITacademy\C#\Classwork_with_Max\290616_WorkWithDatabase\Ado.NET\bin\Debug\Ado.NET.exe.config
+D:\ITacademy\C#\Classwork_with_Max\290616_WorkWithDatabase\Ado.NET\bin\Debug\Ado.NET.exe
+D:\ITacademy\C#\Classwork_with_Max\290616_WorkWithDatabase\Ado.NET\bin\Debug\Ado.NET.pdb
+D:\ITacademy\C#\Classwork_with_Max\290616_WorkWithDatabase\Ado.NET\obj\Debug\Ado.NET.csprojResolveAssemblyReference.cache
+D:\ITacademy\C#\Classwork_with_Max\290616_WorkWithDatabase\Ado.NET\obj\Debug\Ado.NET.exe
+D:\ITacademy\C#\Classwork_with_Max\290616_WorkWithDatabase\Ado.NET\obj\Debug\Ado.NET.pdb
+D:\ITacademy\C#\WindowsFormLongTerm\Ado.NET\bin\Debug\Ado.NET.exe.config
+D:\ITacademy\C#\WindowsFormLongTerm\Ado.NET\obj\Debug\Ado.NET.exe
+D:\ITacademy\C#\WindowsFormLongTerm\Ado.NET\obj\Debug\Ado.NET.pdb
+D:\ITacademy\C#\WindowsFormLongTerm\Ado.NET\bin\Debug\Ado.NET.exe
+D:\ITacademy\C#\WindowsFormLongTerm\Ado.NET\bin\Debug\Ado.NET.pdb
+D:\ITacademy\C#\WindowsFormLongTerm\Ado.NET\obj\Debug\Ado.NET.csprojResolveAssemblyReference.cache
