@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsForm", "WindowsForm\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ado.NET", "Ado.NET\Ado.NET.csproj", "{9201FEEA-B5DE-45AB-BEBD-98ABB3D0B13D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFExample", "EFExample\EFExample.csproj", "{DE5B7988-EEB3-4491-AAE2-81F95404E100}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSONparsing", "JSONparsing\JSONparsing.csproj", "{F3A0FA7D-0FB9-4322-B5E8-27449E4B2A1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{9201FEEA-B5DE-45AB-BEBD-98ABB3D0B13D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9201FEEA-B5DE-45AB-BEBD-98ABB3D0B13D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9201FEEA-B5DE-45AB-BEBD-98ABB3D0B13D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE5B7988-EEB3-4491-AAE2-81F95404E100}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE5B7988-EEB3-4491-AAE2-81F95404E100}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE5B7988-EEB3-4491-AAE2-81F95404E100}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE5B7988-EEB3-4491-AAE2-81F95404E100}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3A0FA7D-0FB9-4322-B5E8-27449E4B2A1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3A0FA7D-0FB9-4322-B5E8-27449E4B2A1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3A0FA7D-0FB9-4322-B5E8-27449E4B2A1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3A0FA7D-0FB9-4322-B5E8-27449E4B2A1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
